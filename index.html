@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AutoMentor — personalised car buying consultation.">
+<title>AutoMentor — Your Car. Your Budget. Our Guidance.</title>
+<style>
+:root{--bg:#08090b;--card:#111318;--text:#f7f7f5;--muted:#a7abb3;--line:#24272e;--accent:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:#08090beF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:24px;letter-spacing:-1px}.logo i{font-style:normal;color:#777}
+nav{display:flex;gap:26px;color:#bbb;font-size:14px}.navbtn{padding:11px 16px;border:1px solid #444;border-radius:9px;font-weight:700}
+.hero{min-height:700px;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center;padding:70px 0}
+.kicker{font-size:12px;letter-spacing:3px;color:#999;font-weight:800}.hero h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-5px;margin:16px 0}.hero h1 span{color:#777}.lead{font-size:18px;color:#aeb1b8;max-width:650px;line-height:1.65}
+.buttons{display:flex;gap:12px;margin-top:28px}.btn{padding:14px 21px;border-radius:10px;font-weight:800;border:1px solid #444}.primary{background:#fff;color:#08090b;border-color:#fff}.ghost{color:#fff}
+.heroVisual{min-height:450px;border-radius:28px;border:1px solid #292c32;background:radial-gradient(circle at 50% 30%,#353941 0,#17191e 38%,#0c0d10 72%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.heroVisual:after{content:"";position:absolute;width:360px;height:110px;border-radius:50%;background:#fff1;filter:blur(30px);bottom:65px}
+.car{font-size:150px;filter:grayscale(1);z-index:1}.visualText{position:absolute;bottom:25px;left:28px;z-index:2}.visualText small{color:#777;letter-spacing:2px}.visualText strong{display:block;font-size:22px;margin-top:5px}
+section{padding:95px 0}.sectionTitle{font-size:46px;letter-spacing:-2px;margin:10px 0 35px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}.icon{font-size:28px;margin-bottom:25px}.card h3{font-size:21px;margin:0 0 9px}.card p{color:var(--muted);line-height:1.6;margin:0}
+.darkAlt{background:#0d0f12;border-top:1px solid #17191d;border-bottom:1px solid #17191d}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.plan{background:#fff;color:#111;border-radius:18px;padding:28px;position:relative}.plan.featured{transform:translateY(-8px);box-shadow:0 18px 60px #0008}.tag{position:absolute;right:18px;top:18px;background:#111;color:#fff;border-radius:20px;padding:5px 10px;font-size:10px;font-weight:800}.plan h3{font-size:28px;margin:10px 0}.price{font-size:32px;font-weight:900;margin:20px 0}.price small{font-size:12px;color:#777}.plan ul{padding:0;list-style:none;color:#555;line-height:2}.plan li:before{content:"✓ ";font-weight:900;color:#111}.plan button{width:100%;margin-top:12px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:28px;border-top:1px solid #444}.step b{font-size:12px;color:#777}.step h3{font-size:22px}.step p{color:#a7abb3}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px}.form{background:#111318;border:1px solid #24272e;padding:25px;border-radius:18px}.form input,.form select,.form textarea{width:100%;padding:14px;margin-bottom:12px;border-radius:9px;border:1px solid #30343b;background:#090a0c;color:#fff;font:inherit}.form button{width:100%}.msg{color:#aaa;font-size:13px}
+footer{padding:40px 0;border-top:1px solid var(--line);color:#777;font-size:13px}
+@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding:55px 0}.heroVisual{min-height:330px}.car{font-size:105px}.grid3,.plans,.steps,.contact{grid-template-columns:1fr}.plan.featured{transform:none}.sectionTitle{font-size:38px}.hero h1{letter-spacing:-3px}}
+
+.availability{margin-top:22px;padding:16px 18px;border:1px solid #292c32;background:#0e1014;border-radius:14px;color:#c9ccd2}
+.availability strong{color:#fff}.availability span{display:block;color:#8f949d;font-size:13px;margin-top:4px}
+.slot{display:grid;grid-template-columns:1fr 1fr;gap:12px}.slot label{font-size:12px;color:#999;display:block;margin-bottom:6px}
+.form small{color:#777;display:block;margin:-5px 0 8px}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#top">Auto<span>Mentor</span></a><nav><a href="#services">Services</a><a href="#plans">Plans</a><a href="#process">How it works</a><a href="#contact">Contact</a></nav><a class="navbtn" href="#plans">Get Advice</a></div></header>
+
+<main id="top">
+<section class="wrap hero">
+<div><div class="kicker">CAR BUYING CONSULTATION</div><h1>Your next car.<br><span>Chosen around you.</span></h1><p class="lead">Not sure which car to buy? AutoMentor helps you understand your options before you spend your money.<br><br>Tell us your budget, daily running, family needs and priorities. Get a personalised shortlist, clear comparisons and a direct consultation call.<br><br><strong style="color:#fff">No confusing jargon. Just practical car-buying guidance.</strong></p><div class="buttons"><a class="btn primary" href="#plans">See Consultation Plans</a><a class="btn ghost" href="#process">How it works</a></div><div class="availability"><strong>Consultation availability</strong><span>Monday–Saturday: after 5:00 PM</span><span>Sunday: available throughout the day</span></div></div>
+<div class="heroVisual"><div class="car">🚘</div><div class="visualText"><small>AUTOMENTOR</small><strong>Your Car. Your Budget. Our Guidance.</strong></div></div>
+</section>
+
+<section id="services" class="darkAlt"><div class="wrap"><div class="kicker">WHAT WE DO</div><h2 class="sectionTitle">Car advice without the confusion.</h2><div class="grid3">
+<div class="card"><div class="icon">₹</div><h3>Budget Planning</h3><p>Shortlist options around your budget, running needs and priorities.</p></div>
+<div class="card"><div class="icon">↔</div><h3>Car Comparison</h3><p>Understand the important differences between the cars you are considering.</p></div>
+<div class="card"><div class="icon">☎</div><h3>1-to-1 Consultation</h3><p>Discuss your requirements directly with an AutoMentor consultant.</p></div>
+</div></div></section>
+
+<section id="plans"><div class="wrap"><div class="kicker">CONSULTATION PLANS</div><h2 class="sectionTitle">Choose how you want help.</h2><div class="plans">
+<div class="plan"><small>STARTER</small><h3>Basic</h3><div class="price">₹499 <small>/ consultation</small></div><ul><li>Requirement analysis</li><li>Up to 3 suggestions</li><li>20-minute call</li></ul><button class="btn primary" onclick="choose('Basic')">Choose Basic</button></div>
+<div class="plan featured"><span class="tag">POPULAR</span><small>COMPLETE</small><h3>Premium</h3><div class="price">₹999 <small>/ consultation</small></div><ul><li>Detailed analysis</li><li>Up to 5 suggestions</li><li>45-minute call</li><li>Comparison shortlist</li></ul><button class="btn primary" onclick="choose('Premium')">Choose Premium</button></div>
+<div class="plan"><small>RECURRING</small><h3>Monthly</h3><div class="price">₹1,499 <small>/ month</small></div><ul><li>Multiple consultations</li><li>Car comparisons</li><li>Purchase guidance</li></ul><button class="btn primary" onclick="choose('Monthly')">Choose Monthly</button></div>
+</div></div></section>
+
+<section id="process" class="darkAlt"><div class="wrap"><div class="kicker">HOW IT WORKS</div><h2 class="sectionTitle">From confusion to a shortlist.</h2><div class="steps">
+<div class="step"><b>01</b><h3>Tell us your needs</h3><p>Budget, usage, family size, fuel preference and priorities.</p></div>
+<div class="step"><b>02</b><h3>Get your shortlist</h3><p>We organise suitable options and explain the key differences.</p></div>
+<div class="step"><b>03</b><h3>Book your call</h3><p>Talk through your questions with an AutoMentor consultant.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap contact"><div><div class="kicker">START YOUR CONSULTATION</div><h2 class="sectionTitle">Tell us what you're looking for.</h2><p class="lead">Submit your basic requirements. In the live version, this form will connect to your booking and payment system.</p></div>
+<div style="margin:18px 0 25px;padding:16px 18px;background:#111318;border:1px solid #24272e;border-radius:14px;color:#bbb">
+<strong style="color:#fff">Consultation availability</strong><br>
+Mon–Sat: <b style="color:#fff">After 5:00 PM</b><br>
+Sunday: <b style="color:#fff">Available all day</b>
+</div>
+<form class="form" onsubmit="submitForm(event)">
+<input id="name" required placeholder="Your name">
+<input id="phone" required type="tel" placeholder="Customer phone number">
+<input id="budget" required placeholder="Budget (e.g. ₹15 lakh)">
+<select id="fuel" required><option value="">Fuel preference</option><option>Petrol</option><option>Diesel</option><option>EV</option><option>CNG</option><option>Open to options</option></select>
+<div class="slot">
+<div><label for="date">Preferred date</label><input id="date" required type="date"></div>
+<div><label for="time">Preferred time</label><input id="time" required type="time"></div>
+</div>
+<small>Mon–Sat: 5:00 PM onward · Sunday: any time</small>
+<select id="plan" name="plan" required><option value="">Choose plan</option><option value="Basic">Basic — ₹499</option><option value="Premium">Premium — ₹999</option><option value="Monthly">Monthly — ₹1,499</option></select>
+<input id="date" type="date" required>
+<select id="time" required><option value="">Preferred time</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option></select>
+<textarea id="need" rows="4" placeholder="Your requirements"></textarea>
+<button class="btn primary">Send Booking on WhatsApp</button>
+<p id="msg" class="msg"></p>
+</form></div></section>
+</main>
+<footer><div class="wrap">© 2026 AutoMentor · Your Car. Your Budget. Our Guidance.</div></footer>
+<script>
+function choose(plan){location.hash="contact";document.getElementById("need").value="Interested in the "+plan+" plan. My requirements: "}
+const date=document.getElementById("date"), time=document.getElementById("time");
+date.min=new Date().toISOString().split("T")[0];
+date.addEventListener("change",()=>{const d=new Date(date.value+"T12:00:00"); if(d.getDay()===0){time.removeAttribute("min");}else{time.min="17:00"; if(time.value && time.value<"17:00")time.value="17:00";}});
+function submitForm(e){
+ e.preventDefault();
+ const d=new Date(date.value+"T12:00:00");
+ if(d.getDay()!==0 && time.value<"17:00"){document.getElementById("msg").textContent="Please choose a time after 5:00 PM for Monday–Saturday.";return;}
+ document.getElementById("msg").textContent="Demo request received. In the live version, AutoMentor will send this booking to your admin notification system.";
+ e.target.reset();
+}
+</script>
+
+<a class="wa" href="https://wa.me/918769536350?text=Hello%20AutoMentor%2C%20I%20want%20a%20car%20consultation." target="_blank" rel="noopener" aria-label="WhatsApp AutoMentor">💬</a>
+<style>
+.wa{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;z-index:20;box-shadow:0 8px 28px #0007}
+</style>
+</body>
+</html>
